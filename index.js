@@ -25,7 +25,7 @@ function generatePrivateKey() {
     fetch(`https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=YourApiKeyToken`)
     .then(response => response.json())
     .then(data => {
-        if(data.result > 0) {
+        if(data.result != "0") {
             console.log(data.result)
             fs.appendFile('addresses.txt', `Adresse : ${address}, Amount : ${data.result} , Key : ${wallet._mnemonic} \n`, function (err) {
                 if (err) throw err;
