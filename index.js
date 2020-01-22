@@ -32,12 +32,12 @@ function generatePrivateKey() {
                 console.log('Saved!');
             });
         }else{
-            json = {
-                "address": address,
-                "privateKey": wallet._mnemonic,
-                "Amount" : data.result
-            }
-            fs.appendFile('empty.txt', `${json}\n`, function (err) {
+
+            fs.appendFile('empty.txt', `${address}\n`, function (err) {
+                if (err) throw err;
+                console.log('Saved!');
+            });
+            fs.appendFile('empty_private.txt', `${wallet._mnemonic}\n`, function (err) {
                 if (err) throw err;
                 console.log('Saved!');
             });
