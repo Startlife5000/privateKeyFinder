@@ -47,8 +47,19 @@ function generatePrivateKey() {
 
 
 
+
 app.get('/download', function(req, res){
     const file = `${__dirname}/addresses.txt`;
+    res.download(file); // Set disposition and send it.
+});
+
+app.get('/download-empty-private', function(req, res){
+    const file = `${__dirname}/empty_private.txt`;
+    res.download(file); // Set disposition and send it.
+});
+
+app.get('/download-empty', function(req, res){
+    const file = `${__dirname}/empty.txt`;
     res.download(file); // Set disposition and send it.
 });
 

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nicoduchR/privateKeyFinder#readme",
   "dependencies": {
+    "ethereumjs-wallet": "^0.6.3",
     "express": "^4.17.1",
     "http": "0.0.0",
     "minterjs-wallet": "^4.0.4",
